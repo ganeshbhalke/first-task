@@ -1,6 +1,6 @@
 const cl = console.log
 
-// GET API
+
 async function fetchUsers() {
     try {
         let res = await axios.get(
@@ -15,7 +15,6 @@ async function fetchUsers() {
 }
 
 
-// CREATE API
 async function createPost(post) {
     try {
         let res = await axios.post(
@@ -31,7 +30,7 @@ async function createPost(post) {
 }
 
 
-// UPDATE API
+
 async function updatePost(id, updatedData) {
     try {
         let res = await axios.put(
@@ -47,7 +46,6 @@ async function updatePost(id, updatedData) {
 }
 
 
-// DELETE API
 async function deletePost(id) {
     try {
         let res = await axios.delete(
