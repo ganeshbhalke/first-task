@@ -1,16 +1,21 @@
-const axios = require('axios')
+const cl = console.log
 
-// G API
+// GET API
 async function fetchUsers() {
     try {
-        let res = await axios.get('https://jsonplaceholder.typicode.com/users')
-        console.log(res.data)
+        let res = await axios.get(
+            'https://jsonplaceholder.typicode.com/users'
+        )
+
+        cl(res.data)
+
     } catch (error) {
-        console.log(error.message)
+        cl(error.message)
     }
 }
 
-// API create data
+
+// CREATE API
 async function createPost(post) {
     try {
         let res = await axios.post(
@@ -18,13 +23,15 @@ async function createPost(post) {
             post
         )
 
-        console.log("Created :", res.data)
+        cl("Created :", res.data)
+
     } catch (error) {
-        console.log(error.message)
+        cl(error.message)
     }
 }
 
-// API call to update
+
+// UPDATE API
 async function updatePost(id, updatedData) {
     try {
         let res = await axios.put(
@@ -32,30 +39,24 @@ async function updatePost(id, updatedData) {
             updatedData
         )
 
-        console.log("Updated :", res.data)
+        cl("Updated :", res.data)
+
     } catch (error) {
-        console.log(error.message)
+        cl(error.message)
     }
 }
 
-// D API
+
+// DELETE API
 async function deletePost(id) {
     try {
         let res = await axios.delete(
             `https://jsonplaceholder.typicode.com/posts/${id}`
         )
 
-        console.log("Deleted :", res.data)
-    } catch (error) {
-        console.log(error.message)
+        cl("Deleted :", res.data)
+
+    } catch (error) { 
+        cl(error.message)
     }
-}
-
-
-// Data export to app.js File
-module.exports = {
-    fetchUsers,
-    createPost,
-    updatePost,
-    deletePost
 }

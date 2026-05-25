@@ -1,5 +1,5 @@
 
-const cl=console.log
+// const cl=console.log
 // let math=require('./sum')
 
 
@@ -28,16 +28,9 @@ const cl=console.log
 // cl(math)
 
 
-const {
-    fetchUsers,
-    createPost,
-    updatePost,
-    deletePost
-} = require('./user')
-
+// const cl = console.log
 
 fetchUsers()
-
 
 createPost({
     title: "Angular",
@@ -45,12 +38,10 @@ createPost({
     userId: 1
 })
 
-
 updatePost(1, {
-    title: " Angular 14",
+    title: "Angular 14",
     body: "NODE CRUD Data",
     userId: 1
 })
-
 
 deletePost(1)
